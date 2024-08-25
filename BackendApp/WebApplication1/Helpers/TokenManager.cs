@@ -36,12 +36,18 @@ namespace BackendApp.Helpers
 
                 var User_id = parsedToken.Claims.Where(c => c.Type == "USERID").FirstOrDefault().Value;
                 var UserName = parsedToken.Claims.Where(c => c.Type == "USERNAME").FirstOrDefault().Value;
+                var AccountId = parsedToken.Claims.Where(c => c.Type == "ACCOUNTID").FirstOrDefault().Value;
+                var RoleId = parsedToken.Claims.Where(c => c.Type == "ROLEID").FirstOrDefault().Value;
+                var RoleName = parsedToken.Claims.Where(c => c.Type == "ROLENAME").FirstOrDefault().Value;
                 
 
                 return new Principal_VM()
                 {
                     User_id = User_id,
                     UserName = UserName,
+                    AccountId = AccountId,
+                    RoleId = RoleId,
+                    RoleName = RoleName,
                     
                 };
             }

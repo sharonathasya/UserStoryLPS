@@ -1,0 +1,92 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - FrontendApp</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/FrontendApp.styles.css" asp-append-version="true" />
+    <link href="~/lib/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+          rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="~/css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css" rel="stylesheet">
+    <!-- Custom styles for this page -->
+    <link href="~/lib/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+        @if (TempData["SuccessMessage"] != null)
+        {
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+                @TempData["SuccessMessage"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+        @if (TempData["ErrorMessage"] != null)
+        {
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                @TempData["ErrorMessage"]
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+        }
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    <!-- Include Bootstrap Datepicker JS -->
+    
+    <script src="~/lib/vendor/jquery/jquery.min.js"></script>
+    <script src="~/lib/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="~/lib/vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="~/lib/vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="~/js/datatables-demo.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+    <!-- Initialize Datepicker -->
+    <script>
+        $(document).ready(function () {
+            $('#datepickerfaktur').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true
+            });
+            $('#datepickerAttachmentin').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true
+            });
+            $('#datepickerAttachment').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true
+            });
+
+            $('#datepickerfakturedit').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true
+            });
+            $('#datepickerAttachmentinedit').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true
+            });
+            $('#datepickerAttachmentedit').datepicker({
+                format: 'yyyy-mm-dd',
+                autoclose: true
+            });
+
+        });
+    </script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

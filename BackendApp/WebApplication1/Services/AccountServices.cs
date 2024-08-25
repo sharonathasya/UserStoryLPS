@@ -31,6 +31,8 @@ namespace BackendApp.Services
             try
             {                
                 var getUser = _dbcontext.Account.Where(x => x.Username == req.USERNAME && x.Password == req.PASSWORD).FirstOrDefault();
+                var getUserRole = _dbcontext.AccountRole.Where(x => x.AccountId == getUser.Id).FirstOrDefault();
+                var getUserRoleName = _dbcontext.TblMasterRole.Where(x => x.Id == getUserRole.RoleId).FirstOrDefault();
                 if (getUser != null) {
                     if (getUser.IsActive == true)
                     {
@@ -42,6 +44,9 @@ namespace BackendApp.Services
                               {
                             new Claim("USERID", getUser.Userid.ToString() ),
                             new Claim("USERNAME",getUser.Username),
+                            new Claim("ACCOUNTID", getUser.Id.ToString() ),
+                            new Claim("ROLEID", getUserRole.RoleId.ToString() ),
+                            new Claim("ROLENAME", getUserRoleName.RoleName.ToString() ),
                               }),
                             Expires = DateTime.UtcNow.AddMinutes(double.Parse(GetConfig.AppSetting["AppSettings:TokenLifetime"])),
                             SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(KeyJWT), SecurityAlgorithms.HmacSha256Signature),

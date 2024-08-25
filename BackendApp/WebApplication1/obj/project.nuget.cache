@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9minkNxxu/TQW8CF5Vq/ja9rnBdoe1ku2E8nno616gigr/Uy20HKjKjB82wqXkV7Uc61w537DDtqqd+A4OjCmw==",
+  "dgSpecHash": "xkvkU8+KGUKu+epBtwnqmmw0r9i96xn7G8jD8KGuJ5BAxEpJGtbMBg5IWqKbg/lb+VG5iOdsrmFA67JZ+FJ2tg==",
   "success": true,
-  "projectFilePath": "C:\\Sharon\\LPS\\WebApplicationLPS\\WebApplication1\\BackendApp.csproj",
+  "projectFilePath": "C:\\Sharon\\LPS\\UsetStoryLPS\\BackendApp\\WebApplication1\\BackendApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\SHARON\\.nuget\\packages\\azure.core\\1.35.0\\azure.core.1.35.0.nupkg.sha512",
     "C:\\Users\\SHARON\\.nuget\\packages\\azure.identity\\1.10.3\\azure.identity.1.10.3.nupkg.sha512",

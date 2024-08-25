@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using SeewashAPICore.ViewModels;
+using System.Net.Mail;
 
 namespace BackendApp.Controllers
 {
@@ -31,10 +32,41 @@ namespace BackendApp.Controllers
         [Authorize]
         [HttpGet]
         [Route("downloadfile")]
-        public async Task<IActionResult> DownloadFile(string FileName)
+        public async Task<IActionResult> DownloadFile(string FileName, int Id)
         {
-            var result = await _attachment.DownloadFile(FileName);
+            var result = await _attachment.DownloadFile(FileName, Id);
             return File(result.Item1, result.Item2, result.Item2);
+        }
+
+        [Authorize]
+        [HttpPost("GetList")]
+        public async Task<IActionResult> GetList()
+        {
+            var res = new ServiceResponse<ResDataAttachment>();
+            try
+            {
+                var _ = await _attachment.GetList();
+
+                if (!_.status)
+                {
+                    res.CODE = 0;
+                    res.MESSAGE = _.message;
+                }
+                else
+                {
+                    res.CODE = 1;
+                    res.MESSAGE = _.message;
+                    res.DATA = _.data;
+                }
+            }
+            catch (Exception ex)
+            {
+                res.CODE = 0;
+                res.MESSAGE = ex.Message == null ? ex.InnerException.ToString() : ex.Message.ToString();
+                return new BadRequestObjectResult(res);
+            }
+
+            return new OkObjectResult(res);
         }
     }
 }

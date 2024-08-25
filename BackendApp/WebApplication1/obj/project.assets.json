@@ -3556,11 +3556,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Sharon\\LPS\\WebApplicationLPS\\WebApplication1\\BackendApp.csproj",
+      "projectUniqueName": "C:\\Sharon\\LPS\\UsetStoryLPS\\BackendApp\\WebApplication1\\BackendApp.csproj",
       "projectName": "BackendApp",
-      "projectPath": "C:\\Sharon\\LPS\\WebApplicationLPS\\WebApplication1\\BackendApp.csproj",
+      "projectPath": "C:\\Sharon\\LPS\\UsetStoryLPS\\BackendApp\\WebApplication1\\BackendApp.csproj",
       "packagesPath": "C:\\Users\\SHARON\\.nuget\\packages\\",
-      "outputPath": "C:\\Sharon\\LPS\\WebApplicationLPS\\WebApplication1\\obj\\",
+      "outputPath": "C:\\Sharon\\LPS\\UsetStoryLPS\\BackendApp\\WebApplication1\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

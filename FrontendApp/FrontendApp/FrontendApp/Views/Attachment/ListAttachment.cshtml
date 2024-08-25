@@ -1,0 +1,61 @@
+﻿@model List<FrontendApp.Models.ResDataAttachment>
+<!-- Begin Page Content -->
+<div class="container-fluid">
+
+    <!-- Page Heading -->
+    <h1 class="h3 mb-2 text-gray-800 mt-4">List Data </h1>
+    
+
+    <!-- DataTales Example -->
+    <div class="card shadow mb-4 ">
+        <div class="card-header py-3">
+            
+            <a asp-action="index" class="float-end btn btn-success">Tambah Data</a>
+           
+            <form asp-controller="Login" asp-action="Logout" method="post" style="display:inline;"
+                  onsubmit="return confirm('Yakin ingin logout?');">
+                <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-sign-out-alt"></i></button>
+            </form>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                    <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>File Name</th>
+                            <th>Created By</th>
+                            <th>Created Date</th>
+                            <th>Action</th>
+                            
+                        </tr>
+                    </thead>
+                   
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.FileName</td>
+                                <td>@item.CreatedBy</td>
+                                <td>@item.CreatedDateTime</td>
+                                <td style="display:flex;align-items:center;gap=15px">
+                                    <a asp-action="Edit" asp-route-id="@item.FileName" class="btn btn-sm btn-primary"><i class="fas fa-edit"></i></a>
+
+                                    <form asp-action="Delete" asp-route-id="@item.Id" method="post" style="display:inline;"
+                                          onsubmit="return confirm('Yakin ingin hapus data?');">
+                                        <button type="submit" class="btn btn-sm btn-danger"><i class="fas fa-trash-alt"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        }
+                        
+                        
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+</div>
+<!-- /.container-fluid -->
