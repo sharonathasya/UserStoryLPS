@@ -78,7 +78,7 @@ namespace BackendApp.Services
                 throw ex;
             }
         }
-        public async Task<(byte[], string, string)> DownloadFile(string FileName, int Id)
+        public async Task<(byte[], string, string)> DownloadFile(int Id)
         {
             try
             {
@@ -92,7 +92,7 @@ namespace BackendApp.Services
                 }
                 memory.Position = 0L;
                 var _ReadAllBytesAsync = await File.ReadAllBytesAsync(Attachment.Path);
-                return (_ReadAllBytesAsync, _ContentType, Path.GetFileName(Attachment.Path));
+                return (_ReadAllBytesAsync, _ContentType, Path.GetFileName(Attachment.FileName));
             }
             catch (Exception ex)
             {

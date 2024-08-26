@@ -40,7 +40,7 @@
 
     public class ReqFile
     {
-        public int id { get; set; }
+        public int Id { get; set; }
         public string FileName { get; set; }
         public string Path { get; set; }
         public string CreatedById { get; set; }

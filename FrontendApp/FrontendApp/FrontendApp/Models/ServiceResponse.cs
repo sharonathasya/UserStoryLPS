@@ -37,7 +37,7 @@ namespace FrontendApp.Models
         public string CreatedBy { get; set; }
         public string CreatedDateTime { get; set; }
         public string AccountId { get; set; }
-
+        
     }
 
 

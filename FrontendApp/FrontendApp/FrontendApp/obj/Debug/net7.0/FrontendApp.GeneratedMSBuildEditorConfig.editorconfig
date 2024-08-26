@@ -42,16 +42,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Sharon/LPS/UsetStoryLPS/FrontendApp/FrontendApp/FrontendApp/Views/Attachment/EditAttachment.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0YWNobWVudFxFZGl0QXR0YWNobWVudC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Sharon/LPS/UsetStoryLPS/FrontendApp/FrontendApp/FrontendApp/Views/Attachment/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0YWNobWVudFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Sharon/LPS/UsetStoryLPS/FrontendApp/FrontendApp/FrontendApp/Views/Attachment/ListAttachment.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0YWNobWVudFxMaXN0QXR0YWNobWVudC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Sharon/LPS/UsetStoryLPS/FrontendApp/FrontendApp/FrontendApp/Views/Attachment/UploadAttachment.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXR0YWNobWVudFxVcGxvYWRBdHRhY2htZW50LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Sharon/LPS/UsetStoryLPS/FrontendApp/FrontendApp/FrontendApp/Views/Home/Index.cshtml]

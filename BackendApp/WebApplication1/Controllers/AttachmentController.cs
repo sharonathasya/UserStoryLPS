@@ -30,12 +30,12 @@ namespace BackendApp.Controllers
         }
 
         [Authorize]
-        [HttpGet]
+        [HttpPost]
         [Route("downloadfile")]
-        public async Task<IActionResult> DownloadFile(string FileName, int Id)
+        public async Task<IActionResult> DownloadFile(int Id)
         {
-            var result = await _attachment.DownloadFile(FileName, Id);
-            return File(result.Item1, result.Item2, result.Item2);
+            var result = await _attachment.DownloadFile(Id);
+            return File(result.Item1, result.Item2, result.Item3);
         }
 
         [Authorize]

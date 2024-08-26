@@ -1,0 +1,57 @@
+﻿@model FrontendApp.Models.Attachment
+
+<style>
+    .vertical-line {
+        border-left: 1px solid #ddd;
+        height: 100%;
+    }
+</style>
+<div class="container">
+
+    <!-- Outer Row -->
+    <div class="row justify-content-center">
+
+        <div class="col-xl-10 col-lg-12 col-md-9">
+
+            <div class="card o-hidden border-0 shadow-lg my-5">
+                <div class="card-body p-0">
+                    <!-- Nested Row within Card Body -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="p-5">
+                                <div class="text-center">
+                                    <h1 class="h4 text-gray-900 mb-5"> <strong>Upload Data Attachment</strong> </h1>
+                                </div>
+                                <form asp-action="SubmitData" class="user" enctype="multipart/form-data">
+                                    <div class="form-row">
+                                        
+                                        <div class="form-group col-md-6">
+                                            <label for="fileUpload">Upload File</label>
+                                            <input type="file" asp-for="UploadFile" class="form-control" id="fileUpload" />
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <a href="@Url.Action("ListData", "Attachment")" class="btn btn-secondary btn-user btn-block">
+                                                Kembali
+                                            </a>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <button type="submit" class="btn btn-primary  btn-user btn-block">Submit Data</button>
+                                        </div>
+                                    </div>
+                                </form>
+                                <hr>
+                                
+                                <p>LPS Technical Test</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
